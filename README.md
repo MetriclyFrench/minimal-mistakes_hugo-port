@@ -200,3 +200,5 @@ The build product can be deployed practically anywhere since it is just a static
 
 * `./hugo/config.yaml{baseurl}` is set to the real path of the site
 * Travis is set up to automatically run `./internals/scripts/deploy.sh` after a successful build of the docs-branch. `deploy.sh` runs `gulp build -p` and force-pushes the build-folder to the `gh-pages`-branch (for more information on how to set up Travis-deployment to `gh-pages`, check out [steveklabnik/automatically_update_github_pages_with_travis_example](https://github.com/steveklabnik/automatically_update_github_pages_with_travis_example)).
+# minimal-mistakes_hugo-port
+A Hugo port of the Jekyll theme Minimal Mistakes
