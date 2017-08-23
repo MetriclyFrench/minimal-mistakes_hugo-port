@@ -1,0 +1,35 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.5.1 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="{{ .Site.LanguageCode }}" class="no-js">
+  <head>
+    {{ partial "head" . }}
+    {{ partial "head/custom" . }}
+  </head>
+
+<!-- ReWork this body tag to conform to Hugo’s Go templating system -->
+  <body class="layout--{{ .Page.layout | default: layout.layout }}{{ if .Page.classes or layout.classes }}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{{ end }}">
+
+    {{ partial "browser-upgrade" . }}
+    {{ partial "masthead" . }}
+
+    {{ .Content }}
+
+    <div class="page__footer">
+      <footer>
+        {{ partial "footer/custom" . }}
+        {{ partial "footer" . }}
+      </footer>
+    </div>
+
+    {{ partial "scripts" . }}
+
+  </body>
+</html>
